@@ -1,7 +1,12 @@
-This project is for CPSC 363.
+# FlappyGodot
+Clone FlappyBird on Godot engine.
 
-It will be a game. It will be good.
+ONLY FOR GODOT 2.2+!!!
 
-Trever's edit!
 
-Arcnet's edit
+
+Screenshots:
+
+[![scr_001](scr/001_mini.png)](scr/001.png)
+[![scr_002](scr/002_mini.png)](scr/002.png)
+[![scr_003](scr/003_mini.png)](scr/003.png)
