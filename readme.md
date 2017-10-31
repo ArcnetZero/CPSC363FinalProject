@@ -1,12 +1,3 @@
-# FlappyGodot
-Clone FlappyBird on Godot engine.
+	A bare-bones clone of the classic desktop distraction!
 
-ONLY FOR GODOT 2.2+!!!
-
-
-
-Screenshots:
-
-[![scr_001](scr/001_mini.png)](scr/001.png)
-[![scr_002](scr/002_mini.png)](scr/002.png)
-[![scr_003](scr/003_mini.png)](scr/003.png)
+This is meant as a project demonstrating how a simple game can be constructed using a few basic GUI nodes.
