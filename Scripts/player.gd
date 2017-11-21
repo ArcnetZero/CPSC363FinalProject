@@ -25,6 +25,7 @@ const MAX_FALL_SPEED = 1400
 var jump_count = 0
 const MAX_JUMP_COUNT = 1
 
+var is_on_ground = true
 var wait_time = 0
 
 func _ready():
@@ -81,10 +82,10 @@ func _process(delta):
 		if input_direction:
 			direction = input_direction
 			
-		if Input.is_action_pressed("move_left"):
+		if Input.is_action_pressed("move_left") and is_on_ground:
 			input_direction = -1
 			sprite_flipper(input_direction)
-		elif Input.is_action_pressed("move_right"):
+		elif Input.is_action_pressed("move_right") and is_on_ground:
 			input_direction = 1
 			sprite_flipper(input_direction)
 		else:
