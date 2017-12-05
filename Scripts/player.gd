@@ -26,7 +26,7 @@ const GRAVITY = 2800
 const MAX_FALL_SPEED = 1400
 
 var jump_count = 0
-const MAX_JUMP_COUNT = 1
+var MAX_JUMP_COUNT = 1
 
 var wait_time = 0
 
@@ -50,6 +50,9 @@ func _input(event):
 		change_sprite(curr_character)
 	if curr_character == 2 and event.is_action_pressed("use_ability"):
 		change_size()
+	if event.is_action_pressed("jump") and jump_count < MAX_JUMP_COUNT:
+		speed.y = -JUMP_FORCE
+		jump_count +=1
 
 func _process(delta):
 	if wait_time == 0:
@@ -81,6 +84,7 @@ func _process(delta):
 		var movement_remainder = move(velocity)
 		
 		
+
 		
 		if is_colliding():
 			var normal = get_collision_normal()
@@ -88,13 +92,11 @@ func _process(delta):
 			speed = normal.slide(speed)
 			move(final_movement)
 			
-			if normal != Vector2(0, 1):
+			if normal == Vector2(0, -1):
 				jump_count = 0
 			
-			if normal == Vector2(0,-1) and Input.is_action_pressed("jump") and jump_count < MAX_JUMP_COUNT:
-				speed.y = -JUMP_FORCE
-				jump_count +=1
-			elif (normal == Vector2(-1,0) or normal == Vector2(1,0)) and Input.is_action_pressed("jump") and jump_count < MAX_JUMP_COUNT:
+
+			if curr_character == 1 and (normal == Vector2(-1,0) or normal == Vector2(1,0)) and Input.is_action_pressed("jump"):
 				speed.y = -JUMP_FORCE
 				speed.x += ACCELERATION * delta
 				velocity = Vector2(speed.x * delta * -direction, speed.y * delta)
@@ -128,14 +130,17 @@ func change_sprite(num):
 		get_node("Sprite").set_opacity(1)
 		get_node("Sprite1").set_opacity(0)
 		get_node("Sprite2").set_opacity(0)
+		MAX_JUMP_COUNT = 1
 	elif num == 2:
 		get_node("Sprite").set_opacity(0)
 		get_node("Sprite1").set_opacity(1)
 		get_node("Sprite2").set_opacity(0)
+		MAX_JUMP_COUNT = 1
 	elif num == 3:
 		get_node("Sprite").set_opacity(0)
 		get_node("Sprite1").set_opacity(0)
 		get_node("Sprite2").set_opacity(1)
+		MAX_JUMP_COUNT = 2
 
 func change_size():
 	if is_small == 0:

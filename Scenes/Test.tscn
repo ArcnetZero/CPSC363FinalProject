@@ -44,7 +44,7 @@ transform/pos = Vector2( 20, 560 )
 transform/scale = Vector2( 0.3125, 0.625001 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -27.2649 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -53,32 +53,34 @@ script/script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="player"]
 
-transform/pos = Vector2( 0, -2.43187e-05 )
+transform/pos = Vector2( 0, -27.2649 )
 transform/scale = Vector2( 4, 2 )
 texture = ExtResource( 2 )
 
 [node name="Sprite1" type="Sprite" parent="player"]
 
 visibility/opacity = 0.0
-transform/pos = Vector2( 0, -2.43187e-05 )
+transform/pos = Vector2( 0, -27.2649 )
 transform/scale = Vector2( 4, 2 )
 texture = ExtResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="player"]
 
 visibility/opacity = 0.0
-transform/pos = Vector2( 0, -2.43187e-05 )
+transform/pos = Vector2( 0, -27.2649 )
 transform/scale = Vector2( 4, 2 )
 texture = ExtResource( 4 )
 
 [node name="Body" type="CollisionShape2D" parent="player"]
 
+transform/pos = Vector2( 0, -27.2649 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 
+transform/pos = Vector2( 0, -27.2649 )
 anchor_mode = 1
 rotating = false
 current = true
