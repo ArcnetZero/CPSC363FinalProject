@@ -77,10 +77,6 @@ func change_size():
 	elif is_small == 1:
 		is_small = 0
 		self.scale(Vector2(2, 2))
-		var new_pos = self.get_pos()
-		print(new_pos.x)
-		print(new_pos.y)
-		#self.set_pos(Vector2(new_pos.x, new_pos.y - 10))
 
 func sprite_flipper(dir):
 	if dir == -1:
