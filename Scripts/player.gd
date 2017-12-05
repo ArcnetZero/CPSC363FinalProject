@@ -8,6 +8,9 @@ var curr_character = 1
 const MAX_CHARACTERS = 3
 const MIN_CHARACTERS = 1
 
+#Characture Attributes
+var is_small = 0
+
 var input_direction = 0
 var direction = 1
 
@@ -35,13 +38,13 @@ func _ready():
 
 
 func _input(event):
-	if event.is_action_pressed("change_character_right"):
+	if is_small == 0 and event.is_action_pressed("change_character_right"):
 		if curr_character != MAX_CHARACTERS:
 			curr_character += 1
 		else:
 			curr_character = 1
 		change_sprite(curr_character)
-	if event.is_action_pressed("change_character_left"):
+	if is_small == 0 and event.is_action_pressed("change_character_left"):
 		if curr_character != MIN_CHARACTERS:
 			curr_character -= 1
 		else:
@@ -50,6 +53,8 @@ func _input(event):
 	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump"):
 		speed.y = -JUMP_FORCE
 		jump_count += 1
+	if curr_character == 2 and event.is_action_pressed("use_ability"):
+		change_size()
 
 func change_sprite(num):
 	if num == 1:
@@ -64,6 +69,18 @@ func change_sprite(num):
 		get_node("Sprite").set_opacity(0)
 		get_node("Sprite1").set_opacity(0)
 		get_node("Sprite2").set_opacity(1)
+
+func change_size():
+	if is_small == 0:
+		is_small = 1
+		self.scale(Vector2(0.5, 0.5))
+	elif is_small == 1:
+		is_small = 0
+		self.scale(Vector2(2, 2))
+		var new_pos = self.get_pos()
+		print(new_pos.x)
+		print(new_pos.y)
+		#self.set_pos(Vector2(new_pos.x, new_pos.y - 10))
 
 func sprite_flipper(dir):
 	if dir == -1:

@@ -40,7 +40,6 @@ extents = Vector2( 32, 34.4084 )
 
 [node name="player" type="KinematicBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 20, 560 )
 transform/scale = Vector2( 0.3125, 0.625001 )
 input/pickable = false
@@ -72,7 +71,7 @@ transform/pos = Vector2( 0, -2.43187e-05 )
 transform/scale = Vector2( 4, 2 )
 texture = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+[node name="Body" type="CollisionShape2D" parent="player"]
 
 shape = SubResource( 1 )
 trigger = false
@@ -1236,7 +1235,6 @@ texture = ExtResource( 5 )
 
 [node name="Ground42" type="StaticBody2D" parent="Terrain"]
 
-editor/display_folded = true
 transform/pos = Vector2( 850, 590 )
 transform/scale = Vector2( 0.3125, 0.312501 )
 input/pickable = false
@@ -1258,12 +1256,12 @@ _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="Terrain/Ground42"]
 
+transform/pos = Vector2( -0.000488281, -0.000244141 )
 transform/scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 
 [node name="Ground43" type="StaticBody2D" parent="Terrain"]
 
-editor/display_folded = true
 transform/pos = Vector2( 870, 590 )
 transform/scale = Vector2( 0.3125, 0.312501 )
 input/pickable = false
@@ -1311,6 +1309,48 @@ trigger = false
 _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="Terrain/Ground44"]
+
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="Ground50" type="StaticBody2D" parent="Terrain"]
+
+transform/pos = Vector2( 890, 590 )
+transform/scale = Vector2( 0.3125, 0.312501 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, -1265.09, -149.048 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/Ground50"]
+
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Terrain/Ground50"]
+
+transform/pos = Vector2( -1265.09, -149.048 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 1
+
+[node name="Sprite" type="Sprite" parent="Terrain/Ground50"]
+
+transform/pos = Vector2( -1265.09, -149.048 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="Sprite1" type="Sprite" parent="Terrain/Ground50"]
 
 transform/scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
