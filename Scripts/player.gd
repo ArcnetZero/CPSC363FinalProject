@@ -29,13 +29,17 @@ var jump_count = 0
 var MAX_JUMP_COUNT = 1
 
 var wait_time = 0
+var in_main_menu = false
 
 func _ready():
 	set_process(true)
 	set_process_input(true)
 	sprite_node = get_node("Sprite")
 
-func _input(event):
+func MenuInput(event):
+	pass
+	
+func LevelInput(event):
 	if is_small == 0 and event.is_action_pressed("change_character_right"):
 		if curr_character != MAX_CHARACTERS:
 			curr_character += 1
@@ -54,7 +58,15 @@ func _input(event):
 		speed.y = -JUMP_FORCE
 		jump_count +=1
 
+
+func _input(event):
+	if in_main_menu == true:
+		MenuInput(event)
+	else:
+		LevelInput(event)
+
 func _process(delta):
+
 	if wait_time == 0:
 		if input_direction:
 			direction = input_direction
