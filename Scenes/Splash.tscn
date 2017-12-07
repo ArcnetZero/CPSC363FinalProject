@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=1]
+[ext_resource path="res://Textures/startButton.png" type="Texture" id=2]
 
 [node name="BackGround" type="TextureFrame"]
 
@@ -40,6 +41,7 @@ margin/bottom = 268.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+textures/normal = ExtResource( 2 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
