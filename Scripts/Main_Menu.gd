@@ -6,5 +6,5 @@ func _ready():
 	
 func _input(event):
 	if event.is_action_pressed("jump"):
-		get_tree().change_scene("res://Scenes/Level1.tscn")
+		get_tree().change_scene("res://Scenes/Test.tscn")
 		

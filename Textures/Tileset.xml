@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="10" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
-	<ext_resource path="res://Textures/TileBackgound.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://Textures/TileRampUp.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://Textures/TileRampDown.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://Textures/TileFloor.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://Textures/TileWall.png" type="Texture" index="0"></ext_resource>
-	<resource type="ConvexPolygonShape2D" path="local://1">
+<resource_file type="TileSet" subresource_count="23" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+	<ext_resource path="res://Textures/TileBackgound.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://Textures/TileRampDown.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://Textures/TileRampUp.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicBR.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://Textures/StoneWall.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallRampUp.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://Textures/StoneBasic.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallRampDown.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicTL.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://Textures/StoneFloor.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicBL.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallFloorTL.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallFloorTR.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://Textures/StoneRampDown.png" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://Textures/StoneRampUp.png" type="Texture" index="12"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicTR.png" type="Texture" index="15"></ext_resource>
+	<resource type="ConvexPolygonShape2D" path="local://5">
 		<real name="custom_solver_bias"> 0 </real>
-		<vector2_array name="points" len="4"> 			25, -25, 25, 25, -25, 25, -25, -25 </vector2_array>
+		<vector2_array name="points" len="4"> 			-25, -25, 25, -25, 25, 25, -25, 25 </vector2_array>
 
 	</resource>
-	<resource type="ConvexPolygonShape2D" path="local://2">
+	<resource type="ConvexPolygonShape2D" path="local://6">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-32, 32, -32, -32, 32, -32, 32, 32 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://7">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-25, -25, 25, -25, 25, 25, -25, 25 </vector2_array>
 
@@ -25,17 +41,22 @@
 		<vector2_array name="points" len="3"> 			12.5, -12.5, -12.5, 12.5, -12.5, -12.5 </vector2_array>
 
 	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://8">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			32, 32, -32, 32, -32, -32, 32, -32 </vector2_array>
+
+	</resource>
 	<main_resource>
 		<string name="0/name"> "Wall" </string>
 		<resource name="0/texture" external="0">  </resource>
 		<vector2 name="0/tex_offset"> 0, 0 </vector2>
 		<resource name="0/material"></resource>		<color name="0/modulate"> 1, 1, 1, 1 </color>
-		<rect2 name="0/region"> 0, 0, 50, 50 </rect2>
-		<vector2 name="0/occluder_offset"> 25, 25 </vector2>
-		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> 25, 25 </vector2>
-		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> 25, 25 </vector2>
+		<rect2 name="0/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="0/occluder_offset"> 32, 32 </vector2>
+		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> 32, 32 </vector2>
+		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> 32, 32 </vector2>
 		<array name="0/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://1">  </resource>
+			<resource  resource_type="Shape2D" path="local://5">  </resource>
 		</array>
 		<vector2 name="0/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="0/one_way_collision_max_depth"> 0 </real>
@@ -43,17 +64,17 @@
 		<resource name="1/texture" external="1">  </resource>
 		<vector2 name="1/tex_offset"> 0, 0 </vector2>
 		<resource name="1/material"></resource>		<color name="1/modulate"> 1, 1, 1, 1 </color>
-		<rect2 name="1/region"> 0, 0, 50, 50 </rect2>
-		<vector2 name="1/occluder_offset"> 25, 25 </vector2>
-		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 25, 25 </vector2>
-		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 25, 25 </vector2>
+		<rect2 name="1/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="1/occluder_offset"> 32, 32 </vector2>
+		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 32, 32 </vector2>
+		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 32, 32 </vector2>
 		<array name="1/shapes" len="1" shared="false">
-			<resource  resource_type="Shape2D" path="local://2">  </resource>
+			<resource  resource_type="Shape2D" path="local://6">  </resource>
 		</array>
 		<vector2 name="1/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="1/one_way_collision_max_depth"> 0 </real>
 		<string name="2/name"> "Ramp Up" </string>
-		<resource name="2/texture" external="2">  </resource>
+		<resource name="2/texture" external="8">  </resource>
 		<vector2 name="2/tex_offset"> 0, 0 </vector2>
 		<resource name="2/material"></resource>		<color name="2/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="2/region"> 0, 0, 50, 50 </rect2>
@@ -66,7 +87,7 @@
 		<vector2 name="2/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="2/one_way_collision_max_depth"> 0 </real>
 		<string name="3/name"> "Ramp Down" </string>
-		<resource name="3/texture" external="3">  </resource>
+		<resource name="3/texture" external="9">  </resource>
 		<vector2 name="3/tex_offset"> 0, 0 </vector2>
 		<resource name="3/material"></resource>		<color name="3/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="3/region"> 0, 0, 50, 50 </rect2>
@@ -79,7 +100,7 @@
 		<vector2 name="3/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="3/one_way_collision_max_depth"> 0 </real>
 		<string name="4/name"> "Background" </string>
-		<resource name="4/texture" external="4">  </resource>
+		<resource name="4/texture" external="10">  </resource>
 		<vector2 name="4/tex_offset"> 0, 0 </vector2>
 		<resource name="4/material"></resource>		<color name="4/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="4/region"> 0, 0, 50, 50 </rect2>
@@ -90,6 +111,149 @@
 		</array>
 		<vector2 name="4/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="4/one_way_collision_max_depth"> 0 </real>
+		<string name="5/name"> "Basic" </string>
+		<resource name="5/texture" external="11">  </resource>
+		<vector2 name="5/tex_offset"> 0, 0 </vector2>
+		<resource name="5/material"></resource>		<color name="5/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="5/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="5/occluder_offset"> 32, 32 </vector2>
+		<resource name="5/occluder"></resource>		<vector2 name="5/navigation_offset"> 32, 32 </vector2>
+		<resource name="5/navigation"></resource>		<vector2 name="5/shape_offset"> 32, 32 </vector2>
+		<array name="5/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://8">  </resource>
+		</array>
+		<vector2 name="5/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="5/one_way_collision_max_depth"> 0 </real>
+		<string name="6/name"> "RampUp" </string>
+		<resource name="6/texture" external="12">  </resource>
+		<vector2 name="6/tex_offset"> 0, 0 </vector2>
+		<resource name="6/material"></resource>		<color name="6/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="6/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="6/occluder_offset"> 32, 32 </vector2>
+		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> 32, 32 </vector2>
+		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> 32, 32 </vector2>
+		<array name="6/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="6/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="6/one_way_collision_max_depth"> 0 </real>
+		<string name="7/name"> "RampDown" </string>
+		<resource name="7/texture" external="13">  </resource>
+		<vector2 name="7/tex_offset"> 0, 0 </vector2>
+		<resource name="7/material"></resource>		<color name="7/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="7/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="7/occluder_offset"> 32, 32 </vector2>
+		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> 32, 32 </vector2>
+		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> 32, 32 </vector2>
+		<array name="7/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="7/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="7/one_way_collision_max_depth"> 0 </real>
+		<string name="8/name"> "SmallBasicTL" </string>
+		<resource name="8/texture" external="14">  </resource>
+		<vector2 name="8/tex_offset"> 0, 0 </vector2>
+		<resource name="8/material"></resource>		<color name="8/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="8/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="8/occluder_offset"> 16, 16 </vector2>
+		<resource name="8/occluder"></resource>		<vector2 name="8/navigation_offset"> 16, 16 </vector2>
+		<resource name="8/navigation"></resource>		<vector2 name="8/shape_offset"> 16, 16 </vector2>
+		<array name="8/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="8/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="8/one_way_collision_max_depth"> 0 </real>
+		<string name="9/name"> "SmallBasicTR" </string>
+		<resource name="9/texture" external="15">  </resource>
+		<vector2 name="9/tex_offset"> 0, 0 </vector2>
+		<resource name="9/material"></resource>		<color name="9/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="9/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="9/occluder_offset"> 16, 16 </vector2>
+		<resource name="9/occluder"></resource>		<vector2 name="9/navigation_offset"> 16, 16 </vector2>
+		<resource name="9/navigation"></resource>		<vector2 name="9/shape_offset"> 16, 16 </vector2>
+		<array name="9/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="9/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="9/one_way_collision_max_depth"> 0 </real>
+		<string name="10/name"> "SmallBasicBL" </string>
+		<resource name="10/texture" external="2">  </resource>
+		<vector2 name="10/tex_offset"> 0, 0 </vector2>
+		<resource name="10/material"></resource>		<color name="10/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="10/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="10/occluder_offset"> 16, 16 </vector2>
+		<resource name="10/occluder"></resource>		<vector2 name="10/navigation_offset"> 16, 16 </vector2>
+		<resource name="10/navigation"></resource>		<vector2 name="10/shape_offset"> 16, 16 </vector2>
+		<array name="10/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="10/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="10/one_way_collision_max_depth"> 0 </real>
+		<string name="11/name"> "SmallBasicBR" </string>
+		<resource name="11/texture" external="3">  </resource>
+		<vector2 name="11/tex_offset"> 0, 0 </vector2>
+		<resource name="11/material"></resource>		<color name="11/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="11/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="11/occluder_offset"> 16, 16 </vector2>
+		<resource name="11/occluder"></resource>		<vector2 name="11/navigation_offset"> 16, 16 </vector2>
+		<resource name="11/navigation"></resource>		<vector2 name="11/shape_offset"> 16, 16 </vector2>
+		<array name="11/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="11/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="11/one_way_collision_max_depth"> 0 </real>
+		<string name="12/name"> "SmallFloorTL" </string>
+		<resource name="12/texture" external="4">  </resource>
+		<vector2 name="12/tex_offset"> 0, 0 </vector2>
+		<resource name="12/material"></resource>		<color name="12/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="12/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="12/occluder_offset"> 16, 16 </vector2>
+		<resource name="12/occluder"></resource>		<vector2 name="12/navigation_offset"> 16, 16 </vector2>
+		<resource name="12/navigation"></resource>		<vector2 name="12/shape_offset"> 16, 16 </vector2>
+		<array name="12/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="12/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="12/one_way_collision_max_depth"> 0 </real>
+		<string name="13/name"> "SmallFloorTR" </string>
+		<resource name="13/texture" external="5">  </resource>
+		<vector2 name="13/tex_offset"> 0, 0 </vector2>
+		<resource name="13/material"></resource>		<color name="13/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="13/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="13/occluder_offset"> 16, 16 </vector2>
+		<resource name="13/occluder"></resource>		<vector2 name="13/navigation_offset"> 16, 16 </vector2>
+		<resource name="13/navigation"></resource>		<vector2 name="13/shape_offset"> 16, 16 </vector2>
+		<array name="13/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="13/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="13/one_way_collision_max_depth"> 0 </real>
+		<string name="14/name"> "SmallRampUp" </string>
+		<resource name="14/texture" external="6">  </resource>
+		<vector2 name="14/tex_offset"> 0, 0 </vector2>
+		<resource name="14/material"></resource>		<color name="14/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="14/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="14/occluder_offset"> 16, 16 </vector2>
+		<resource name="14/occluder"></resource>		<vector2 name="14/navigation_offset"> 16, 16 </vector2>
+		<resource name="14/navigation"></resource>		<vector2 name="14/shape_offset"> 16, 16 </vector2>
+		<array name="14/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="14/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="14/one_way_collision_max_depth"> 0 </real>
+		<string name="15/name"> "SmallRampDown" </string>
+		<resource name="15/texture" external="7">  </resource>
+		<vector2 name="15/tex_offset"> 0, 0 </vector2>
+		<resource name="15/material"></resource>		<color name="15/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="15/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="15/occluder_offset"> 16, 16 </vector2>
+		<resource name="15/occluder"></resource>		<vector2 name="15/navigation_offset"> 16, 16 </vector2>
+		<resource name="15/navigation"></resource>		<vector2 name="15/shape_offset"> 16, 16 </vector2>
+		<array name="15/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://7">  </resource>
+		</array>
+		<vector2 name="15/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="15/one_way_collision_max_depth"> 0 </real>
 
 	</main_resource>
 </resource_file>
