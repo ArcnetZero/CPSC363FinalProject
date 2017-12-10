@@ -8,8 +8,12 @@
 [ext_resource path="res://Textures/Main_Menu_Normal.png" type="Texture" id=6]
 [ext_resource path="res://Textures/Main_Menu_Pressed.png" type="Texture" id=7]
 [ext_resource path="res://Textures/Main_Menu_Hovered.png" type="Texture" id=8]
+<<<<<<< HEAD
 [ext_resource path="res://Scripts/NextLevel.gd" type="Script" id=9]
 
+=======
+[ext_resource path="res://Scripts/To_Main_Menu.gd" type="Script" id=9]
+>>>>>>> 25861ea534fa79041491c9212fa26146a45638ee
 
 [node name="Node2D" type="Node2D"]
 
