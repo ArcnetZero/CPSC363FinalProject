@@ -35,6 +35,10 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 	sprite_node = get_node("Sprite")
+	
+func hit(type):
+    if (type == "flag"):
+        get_tree().change_scene("res://Scenes/Level2.tscn")
 
 func MenuInput(event):
 	pass
