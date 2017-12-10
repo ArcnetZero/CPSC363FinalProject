@@ -29,7 +29,6 @@ var jump_count = 0
 var MAX_JUMP_COUNT = 1
 
 var wait_time = 0
-var in_main_menu = false
 
 func _ready():
 	set_process(true)
@@ -37,13 +36,10 @@ func _ready():
 	sprite_node = get_node("Sprite")
 	
 func hit(type):
-    if (type == "flag"):
-        get_tree().change_scene("res://Scenes/Level3.tscn")
+	if(type == "flag"):
+		get_node("Victory_Canvas/Backgound").show()
 
-func MenuInput(event):
-	pass
-	
-func LevelInput(event):
+func _input(event):
 	if is_small == 0 and event.is_action_pressed("change_character_right"):
 		if curr_character != MAX_CHARACTERS:
 			curr_character += 1
@@ -61,13 +57,6 @@ func LevelInput(event):
 	if event.is_action_pressed("jump") and jump_count < MAX_JUMP_COUNT:
 		speed.y = -JUMP_FORCE
 		jump_count +=1
-
-
-func _input(event):
-	if in_main_menu == true:
-		MenuInput(event)
-	else:
-		LevelInput(event)
 
 func _process(delta):
 

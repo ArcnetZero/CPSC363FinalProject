@@ -5,19 +5,14 @@
 [ext_resource path="res://Textures/Restart_Pressed.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Restart_Hovered.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Restart.gd" type="Script" id=5]
-[ext_resource path="res://Textures/Main_Menu_Normal.png" type="Texture" id=6]
-[ext_resource path="res://Textures/Main_Menu_Pressed.png" type="Texture" id=7]
-[ext_resource path="res://Textures/Main_Menu_Hovered.png" type="Texture" id=8]
-<<<<<<< HEAD
-[ext_resource path="res://Scripts/NextLevel.gd" type="Script" id=9]
-
-=======
+[ext_resource path="res://Textures/Next_Level_Normal.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Next_Level_Pressed.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Next_Level_Hovered.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/To_Main_Menu.gd" type="Script" id=9]
->>>>>>> 25861ea534fa79041491c9212fa26146a45638ee
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Pause_Canvas" type="CanvasLayer" parent="."]
+[node name="Victory_Canvas" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
 layer = 1
@@ -25,9 +20,9 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="Backgound" type="TextureFrame" parent="Pause_Canvas"]
+[node name="Backgound" type="TextureFrame" parent="Victory_Canvas"]
 
-visibility/opacity = 0.75
+visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -40,7 +35,7 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 0
 
-[node name="Restart" type="TextureButton" parent="Pause_Canvas/Backgound"]
+[node name="Restart" type="TextureButton" parent="Victory_Canvas/Backgound"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -60,7 +55,7 @@ params/resize_mode = 0
 params/stretch_mode = 0
 script/script = ExtResource( 5 )
 
-[node name="Main_Menu" type="TextureButton" parent="Pause_Canvas/Backgound"]
+[node name="Next Level" type="TextureButton" parent="Victory_Canvas/Backgound"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -80,7 +75,7 @@ params/resize_mode = 0
 params/stretch_mode = 0
 script/script = ExtResource( 9 )
 
-[node name="Label" type="Label" parent="Pause_Canvas/Backgound"]
+[node name="Label" type="Label" parent="Victory_Canvas/Backgound"]
 
 rect/scale = Vector2( 4, 4 )
 focus/ignore_mouse = true
@@ -91,7 +86,8 @@ margin/left = 306.0
 margin/top = 200.0
 margin/right = 409.0
 margin/bottom = 214.0
-text = "Game is Paused"
+text = "Victory!"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="TileSet" subresource_count="27" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
-	<ext_resource path="res://Textures/StoneSmallBasicBR.png" type="Texture" index="10"></ext_resource>
 	<ext_resource path="res://Textures/StoneWall.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://Textures/StoneSmallRampUp.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://Textures/StoneBasic.png" type="Texture" index="0"></ext_resource>
-	<ext_resource path="res://Textures/StoneSmallRampDown.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicTR.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://Textures/StoneRampUp.png" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://Textures/StoneSmallBasicTL.png" type="Texture" index="7"></ext_resource>
 	<ext_resource path="res://Textures/StoneFloor.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://Textures/StoneSmallBasicBL.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://Textures/StoneSmallFloorTL.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallRampUp.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://Textures/StoneSmallFloorTR.png" type="Texture" index="12"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallFloorTL.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicBR.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallBasicBL.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://Textures/StoneBasic.png" type="Texture" index="0"></ext_resource>
 	<ext_resource path="res://Textures/StoneRampDown.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://Textures/StoneRampUp.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://Textures/StoneSmallBasicTR.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://Textures/StoneSmallRampDown.png" type="Texture" index="3"></ext_resource>
 	<resource type="ConvexPolygonShape2D" path="local://10">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="4"> 			-32, -32, 32, -32, 32, 32, -32, 32 </vector2_array>
