@@ -38,7 +38,7 @@ func _ready():
 	
 func hit(type):
     if (type == "flag"):
-        get_tree().change_scene("res://Scenes/Level2.tscn")
+        get_tree().change_scene("res://Scenes/Level3.tscn")
 
 func MenuInput(event):
 	pass
