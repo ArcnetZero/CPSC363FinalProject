@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=1]
-[ext_resource path="res://Textures/startButton.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Splash_Screen_Background.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Start_Normal.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Start_Pressed.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Start_Hovered.png" type="Texture" id=5]
 
 [node name="BackGround" type="TextureFrame"]
 
@@ -13,11 +16,13 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1024.0
 margin/bottom = 600.0
+texture = ExtResource( 1 )
 stretch_mode = 0
-script/script = ExtResource( 1 )
+script/script = ExtResource( 2 )
 
 [node name="Logo" type="TextureFrame" parent="."]
 
+rect/scale = Vector2( 2, 12 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -30,18 +35,21 @@ stretch_mode = 0
 
 [node name="Start" type="TextureButton" parent="."]
 
+rect/scale = Vector2( 2, 2 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 472.0
-margin/top = 228.0
+margin/left = 410.0
+margin/top = 400.0
 margin/right = 512.0
-margin/bottom = 268.0
+margin/bottom = 440.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
+textures/hover = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
